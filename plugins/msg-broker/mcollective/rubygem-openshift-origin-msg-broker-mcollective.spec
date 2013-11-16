@@ -10,7 +10,7 @@
 
 Summary:       OpenShift plugin for mcollective service
 Name:          rubygem-%{gem_name}
-Version: 1.17.2
+Version: 1.17.3
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
@@ -85,6 +85,12 @@ sed -i -e "s|\(/etc/mcollective/client.cfg\)|%{scl_root}/\1|" %{buildroot}/etc/o
 %attr(0644,-,-) %ghost %{?scl:%scl_root}/etc/mcollective/client.cfg
 
 %changelog
+* Fri Nov 15 2013 Vlad Iovanov <vlad.iovanov@uhurusoftware.com> 1.17.3-1
+- Merge remote-tracking branch 'redhat/master' into openshift-windows
+  (vlad.iovanov@uhurusoftware.com)
+- First attempt at adding support for Windows Nodes in the broker.
+  (vlad.iovanov@uhurusoftware.com)
+
 * Thu Nov 14 2013 Adam Miller <admiller@redhat.com> 1.17.2-1
 - Fix typo (dmcphers@redhat.com)
 
