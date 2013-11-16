@@ -9,7 +9,7 @@
 
 Summary:       Cloud Development Controller
 Name:          rubygem-%{gem_name}
-Version: 1.17.6
+Version: 1.17.7
 Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
@@ -85,6 +85,14 @@ mkdir -p %{buildroot}/etc/openshift/
 %{gem_dir}/doc/%{gem_name}-%{version}
 
 %changelog
+* Fri Nov 15 2013 Vlad Iovanov <vlad.iovanov@uhurusoftware.com> 1.17.7-1
+- Fixed a bug in listing cartridges that would cause an error if only one set
+  (either Linux or Windows) was present. (vlad.iovanov@uhurusoftware.com)
+- Merge remote-tracking branch 'redhat/master' into openshift-windows
+  (vlad.iovanov@uhurusoftware.com)
+- First attempt at adding support for Windows Nodes in the broker.
+  (vlad.iovanov@uhurusoftware.com)
+
 * Thu Nov 14 2013 Adam Miller <admiller@redhat.com> 1.17.6-1
 - Bug 1028393 (lnader@localhost.localdomain)
 
